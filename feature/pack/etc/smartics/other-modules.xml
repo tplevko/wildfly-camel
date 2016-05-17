@@ -239,6 +239,13 @@
         </dependencies>
     </module>
 
+    <module name="com.google.guava" slot="19.0">
+        <properties>
+            <property name="jboss.api" value="private"/>
+        </properties>
+        <include artifact=":guava" />
+    </module>
+
     <module name="com.jcraft.jsch">
         <properties>
             <property name="jboss.api" value="private"/>
@@ -616,20 +623,6 @@
         <include artifact="org.apache.commons:commons-pool2" />
         <dependencies>
             <module name="javax.api" />
-        </dependencies>
-    </module>
-
-    <!-- [FIXME #1357] Integrate with httpclient 4.5.2 when provided by WildFly -->
-    <module name="org.apache.httpcomponents" slot="4.5.2" inherit-slot="false">
-        <properties>
-            <property name="jboss.api" value="private"/>
-        </properties>
-        <include artifact="org.apache.httpcomponents:httpclient" />
-        <include artifact="org.apache.httpcomponents:httpcore" />
-        <include artifact="org.apache.httpcomponents:httpmime" />
-        <dependencies>
-            <module name="javax.api" />
-            <module name="org.apache.james.mime4j"/>
         </dependencies>
     </module>
 

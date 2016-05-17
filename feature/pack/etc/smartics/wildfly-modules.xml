@@ -48,10 +48,6 @@
         <include artifact=":jackson-module-jaxb-annotations" />
     </module>
     
-    <module name="com.google.guava" skip="true">
-        <include artifact=":guava" />
-    </module>
-
     <module name="io.undertow.core" skip="true">
         <include artifact=":undertow-core" />
     </module>
@@ -238,7 +234,10 @@
     
     <module name="org.apache.httpcomponents" skip="true">
         <include artifact="org.apache.httpcomponents:httpasyncclient" />
+        <include artifact="org.apache.httpcomponents:httpclient" />
+        <include artifact="org.apache.httpcomponents:httpcore" />
         <include artifact="org.apache.httpcomponents:httpcore-nio" />
+        <include artifact="org.apache.httpcomponents:httpmime" />
     </module>
 
     <module name="org.apache.james.mime4j" skip="true">
