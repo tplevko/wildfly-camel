@@ -27,6 +27,7 @@ import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Assert;
 import org.junit.Assume;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.optaplanner.examples.cloudbalancing.domain.CloudBalance;
@@ -36,6 +37,7 @@ import org.wildfly.extension.camel.CamelAware;
 
 @CamelAware
 @RunWith(Arquillian.class)
+@Ignore("[#1606] Cannot compile optaplanner rules on wildfly-11.0.x")
 public class OptaPlannerIntegrationTest  {
 
     @Deployment
